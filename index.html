@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOCX web viewer</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+	
+  	
+	<!-- Navbar from Bootstrap-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#">Docx Web Viewer</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="https://CoderTatva-2006.github.io">Home <span class="sr-only">(current)</span></a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<!-- Custom input bar from bootstrap -->
+
+
+	<div class="container-fluid">
+		<div class="input-group">
+		  <div class="custom-file">
+		    <input type="file" class="custom-file-input" id="file_in" aria-describedby="inputGroupFileAddon04" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+		    <label class="custom-file-label" for="file_in" id="file_name">Choose a Word file</label>
+		  </div>
+		  <div class="input-group-append">
+		    <button class="btn btn-outline-secondary" type="button" onclick="try{submit()}catch(TypeError){alert('Please select a file!')}" id="sub">Submit and Convert</button>
+		    <button class="btn btn-outline-secondary" type="button" id="download" disabled onclick="handleDownloadFileSelect()">Download Converted File as html</button>
+		</div>
+	</div>
+
+	<!-- custom html -->
+
+	
+	<div id="output"></div>
+
+
+	<!-- Javascripts -->
+	<script type="text/javascript" src="FileSaver.min.js"></script>
+	<script type="text/javascript" src="mammoth.browser.min.js"></script>
+	<script type="text/javascript" src="jquery-3.5.1.slim.min.js"></script>
+	<script type="text/javascript" src="bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</div>
+</body>
+</html>
